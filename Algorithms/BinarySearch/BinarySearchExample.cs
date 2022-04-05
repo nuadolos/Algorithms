@@ -16,21 +16,14 @@ namespace Algorithms.BinarySearch
         /// </summary>
         public static void SearchElementExample()
         {
-            Random rnd = new Random();
-            int[] randomArray = new int[100];
-
-            for (int i = 0; i < randomArray.Length; i++)
-                randomArray[i] = rnd.Next(200);
+            int[] randomArray = FuncArray.Create(100);
 
             Array.Sort(randomArray); // Важно, чтобы массив был отсортирован
                                      // иначе бинарный поиск не будет работать
 
             do
             {
-                foreach (int el in randomArray)
-                    Console.Write(el + " ");
-
-                Console.WriteLine("\n\n");
+                FuncArray.Print(randomArray);
 
                 int steps = 0;
                 int findNum = int.Parse(Console.ReadLine() ?? "0");

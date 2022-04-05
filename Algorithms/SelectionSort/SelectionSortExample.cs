@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Algorithms;
 
 namespace Algorithms.SelectionSort
 {
@@ -16,16 +17,7 @@ namespace Algorithms.SelectionSort
         /// </summary>
         public static void SortingArrayExample()
         {
-            Random rnd = new Random();
-            int[] randomArray = new int[10];
-
-            for (int i = 0; i < randomArray.Length; i++)
-                randomArray[i] = rnd.Next(100);
-
-            foreach (int el in SelectionSort(randomArray))
-            {
-                Console.Write(el + " ");
-            }
+            FuncArray.Print(FuncArray.Create(100));
         }
 
         /// <summary>
@@ -41,7 +33,7 @@ namespace Algorithms.SelectionSort
             {
                 int element = NextElement(tempArray, false);
                 newArray[i] = tempArray[element];
-                RemoveAt(ref tempArray, element);
+                FuncArray.RemoveAt(ref tempArray, element);
             }
 
             return newArray;
@@ -87,27 +79,6 @@ namespace Algorithms.SelectionSort
             }
 
             return findIndex;
-        }
-
-        /// <summary>
-        /// Удаление ячейки массива по указанному индексу
-        /// </summary>
-        /// <param name="tempArray"></param>
-        /// <param name="index"></param>
-        static void RemoveAt(ref int[] tempArray, int index)
-        {
-            int[] newArray = new int[tempArray.Length - 1];
-            int nextElement = 0;
-
-            for (int i = 0; i < newArray.Length; i++)
-            {
-                if (i == index) 
-                    nextElement++;
-
-                newArray[i] = tempArray[i + nextElement];
-            }
-
-            tempArray = newArray;
         }
     }
 }

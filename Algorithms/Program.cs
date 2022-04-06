@@ -8,4 +8,12 @@
 // Algorithms.Recursion.RecursionExample.RecursiveMethodsExample();
 
 // Алгоритм "Быстрая сортировка"
-Algorithms.QuickSearch.QuickSearchExample.QSortExample();
+// Algorithms.QuickSearch.QuickSearchExample.QSortExample();
+// Algorithms.QuickSearch.QuickSearchExample.QSortArrayExample();
+// Algorithms.QuickSearch.QuickSearchExample.ListSortVsArrayQSort();
+
+// Хеш-таблица
+// Algorithms.HashTable.HashTableExamle.HashTableItemsExample();
+
+// Алгоритм "Поиск в ширину"
+Algorithms.BreadthFirstSearch.BreadthFirstSearchExample.SearchExample();

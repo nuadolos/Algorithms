@@ -54,5 +54,59 @@ namespace Algorithms.QuickSearch
                     .Where(item => item.CompareTo(list.First()) > 0))
                 .ShortQuickSort();
         }
+
+        /// <summary>
+        /// Метод, совершающий сортировку по возрастанию
+        /// </summary>
+        /// <param name="array"></param>
+        /// <param name="start"></param>
+        /// <param name="end"></param>
+        /// <returns></returns>
+        static int Partition(int[] array, int start, int end)
+        {
+            // Запоминает элемент после младшего в массиве
+            int marker = start;
+
+            for (int i = start; i <= end; i++)
+            {
+                if (array[i] <= array[end])
+                {
+                    int temp = array[marker];
+                    array[marker] = array[i];
+                    array[i] = temp;
+                    marker++;
+                }
+            }
+            
+            // Возвращает индекс элемента до опорного
+            return marker == 0 ? 1 : --marker;
+        }
+
+        /// <summary>
+        /// Метод, возвращающий массив, отсортированный по возрастанию
+        /// </summary>
+        /// <param name="array"></param>
+        /// <param name="start"></param>
+        /// <param name="end"></param>
+        /// <returns></returns>
+        public static int[] QuickSortArray(int[] array, int start, int end)
+        {
+            if (start >= end)
+                return array;
+
+            // Опорный элемент
+            int pivot = Partition(array, start, end);
+
+            // Сортирует элементы в массиве до опорного
+            // т.е. все значения элементов меньше или равны значению опорного 
+            QuickSortArray(array, start, pivot - 1);
+
+            // Сортирует элементы в массиве, начиная с опорного
+            // т.е. все значения элементов больше значения опорного 
+            QuickSortArray(array, pivot + 1, end);
+
+            // Возвращает отсортированный массив
+            return array;
+        }
     }
 }

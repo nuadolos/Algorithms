@@ -19,4 +19,7 @@
 // Algorithms.BreadthFirstSearch.BreadthFirstSearchExample.SearchExample();
 
 // Алгоритм "Дейкстры"
-Algorithms.Dijkstra.DijkstraAlgorithmExample.AlgorithmExample();
+// Algorithms.Dijkstra.DijkstraAlgorithmExample.AlgorithmExample();
+
+// Жадный алгоритм
+Algorithms.Greedy.GreedyAlgorithmExample.AlgorithmExample();

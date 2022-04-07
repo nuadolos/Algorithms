@@ -16,4 +16,7 @@
 // Algorithms.HashTable.HashTableExamle.HashTableItemsExample();
 
 // Алгоритм "Поиск в ширину"
-Algorithms.BreadthFirstSearch.BreadthFirstSearchExample.SearchExample();
+// Algorithms.BreadthFirstSearch.BreadthFirstSearchExample.SearchExample();
+
+// Алгоритм "Дейкстры"
+Algorithms.Dijkstra.DijkstraAlgorithmExample.AlgorithmExample();

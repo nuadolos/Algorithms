@@ -22,4 +22,7 @@
 // Algorithms.Dijkstra.DijkstraAlgorithmExample.AlgorithmExample();
 
 // Жадный алгоритм
-Algorithms.Greedy.GreedyAlgorithmExample.AlgorithmExample();
+// Algorithms.Greedy.GreedyAlgorithmExample.AlgorithmExample();
+
+// Динамическое программироваие
+Algorithms.Dynamic.DynamicProgrammingExample.AlgoritmExample();
